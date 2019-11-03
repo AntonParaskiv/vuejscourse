@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 40px;
+        }
+        .red {background: red;}
+        .blue {background: blue;}
+        .green {background: green;}
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <h1 v-show="isVisible">I am visible!</h1>
+    <h2 v-show="!isVisible">You can't see me!</h2>
+
+    <button @click="isVisible = !isVisible">Toggle</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            isVisible: true,
+        },
+        computed:{
+        },
+        methods: {
+        },
+    })
+
+</script>
+</body>
+</html>
